@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+nav div .title{
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+}
+
+.namebox .form-group{
+    margin: 0 15px 0 0;
+}
+

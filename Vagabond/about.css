@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+nav div .title{
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+}
+
+/* .row{
+    flex-wrap: nowrap;
+} */
+
+.featurette {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

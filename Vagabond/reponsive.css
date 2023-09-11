@@ -1,0 +1,282 @@
+/* Navbar */
+@media screen and (max-width:550px) {
+    .navbar ul li {
+        font-size: 15px;
+
+    }
+
+    .navbar button {
+        font-size: 14px;
+    }
+}
+
+/* Carousel */
+@media screen and (max-width:730px) {
+    .carousel-item button {
+        height: 30px;
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .carousel-item h2 {
+        font-size: 15px;
+    }
+
+    .carousel-item p {
+        font-size: 12px;
+    }
+
+    .carousel-item button {
+        height: 30px;
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width:460px) {
+    .carousel-inner img {
+        height: 163px;
+    }
+}
+
+
+/* Card Container */
+@media screen and (min-width:1201px) {
+    .card-container img {
+        position: relative;
+        top: 8px;
+        right: 9px;
+        border-radius: 5px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .card-container2 .col-md-6 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:551px) and (max-width:767px) {
+    .card-container img {
+        position: relative;
+        top: 7px;
+        right: 9px;
+        border-radius: 5px;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .card-container {
+        font-size: 14px;
+    }
+
+    .card-container h3 {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width:520px) {
+    .card-container .card1 {
+        width: 350px;
+        margin: 0 auto;
+    }
+
+    .card-container .card2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-container .img-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .card-container img {
+        border-radius: 5px;
+    }
+}
+
+
+/* Client Thoughts */
+@media screen and (max-width:995px) {
+    .client-thoughts3 {
+        width: auto;
+    }
+
+    .client-img img {
+        height: 169px;
+    }
+
+    .client-bg2 {
+        background-size: cover;
+    }
+}
+
+
+@media screen and (max-width:767px) {
+    .client-bg2 {
+        background-size: auto;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .client-head {
+        font-size: 1.2rem;
+    }
+
+    .client-thoughts h3 {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width:520px) {
+    .client-thoughts {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .client-img img {
+        height: 150px;
+    }
+}
+
+/* Places */
+@media (min-width: 992px) {
+    .places img {
+        height: 300px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .places .row-cols-md-3>* {
+        flex: 0 0 auto;
+        width: 33.333%;
+    }
+
+    .places img {
+        height: 200px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .places img {
+        height: 230px;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 575px) {
+    .places {
+        font-size: 14px;
+    }
+
+    .places .row-cols-sm-2>* {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+
+    .places img {
+        height: 170px;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .places .col-3 {
+        width: 60%;
+    }
+}
+
+/* Places */
+@media screen and (max-width:1200px) {
+    .sponsor img {
+        height: 100px;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .sponsor img {
+        height: 80px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .sponsor img {
+        height: 50px;
+    }
+}
+
+@media screen and (max-width:510px) {
+    .sponsor .simg {
+        padding-top: 10px;
+    }
+}
+
+
+/* Freq asked questions */
+@media screen and (max-width:550px) {
+    .accordion-header button {
+        font-size: 15px !important;
+    }
+
+    .accordion-item {
+        font-size: 14px;
+    }
+}
+
+/* Footer */
+/* @media screen and (max-width:550px) {
+    footer {
+        font-size: 12px !important;
+    }
+} */
+
+@media screen and (max-width:991px) {
+    footer .section {
+       text-align: center;
+    }
+} 
+
+@media screen and (max-width:400px) {
+    footer {
+        display: flex  !important;
+        flex-wrap: wrap !important;
+        justify-content: space-between !important;
+        font-size: 14px;
+    }
+
+    footer .section {
+        width: 49% !important;
+    }
+} 
+
+/* About font img */
+
+@media screen and (max-width:576px) {
+    .about h2 {
+        font-size: 19px;
+        margin-top: 5px;
+    }
+
+    .about .lead {
+        font-size: 16px;
+    }
+
+    .about .col-md-5 {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width:330px) and (max-width:576px) {
+    .about img {
+        height: 312px;
+    }
+}
+
+@media screen and (min-width:330px) and (max-width:400px) {
+    .about img {
+        height: 252px;
+    }
+}
