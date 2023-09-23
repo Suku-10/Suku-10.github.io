@@ -8,6 +8,10 @@
     font-family: 'Libre Franklin', sans-serif;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Libre Franklin', sans-serif;
     overflow-x: hidden;
@@ -79,7 +83,7 @@ nav .cancel-btn.active {
 
 nav .fa-xmark {
     font-size: 30px;
-  }
+}
 
 @media (min-width: 992px) {
     .navbar-expand-lg .navbar-nav {
