@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CodeVally</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animation.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">CodeVally</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- <button class="cancel-btn"><i class="fa-solid fa-xmark"></i></button> -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Top Stories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Premium</a>
+                    </li>
+                </ul>
+                <!-- <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form> -->
+
+
+                <div class="mx-2">
+                    <button class="btn btn-style loginBtn" data-bs-toggle="modal" data-bs-target="#loginModal">Log
+                        in</button>
+                    <button class="btn btn-style" data-bs-toggle="modal" data-bs-target="#signupModal">Sign up</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="loginModalLabel">Login</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Log in</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Signup Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="signupModalLabel">Sign up</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">Enter Name
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="First name">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control my-1" placeholder="Last name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sign up</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- title container -->
+    <div class="container-fluid title-container">
+        <div class="front-img">
+            <img src="img/title-img.jpg" alt="">
+        </div>
+        <div class="title">
+            <h1>
+                Welcome to
+                <strong>CodeVally</strong>
+            </h1>
+            <div class="title-part2">
+                <p>Learn <span class="multitext"></span></p>
+            </div>
+        </div>
+    </div>
+    <!-- Button Container -->
+    <div class="container button-container">
+        <button type="button" class="btn btn-light wow animate__animated animate__slideInLeft animate__delay-1s"
+            id="newBtn">New</button>
+        <button type="button" class="btn btn-light wow animate__animated animate__zoomIn animate__delay-1s"
+            id="regularBtn">Regular</button>
+        <button type="button" class="btn btn-light wow animate__animated animate__slideInRight animate__delay-1s"
+            id="trendingBtn">Trending</button>
+        <!-- <button type="button" class="btn btn-light">World</button>
+        <button type="button" class="btn btn-light">Followings</button> -->
+    </div>
+
+    <!-- new,regular,trending -->
+    <div class="container-fluid my-2 wow animate__animated animate__zoomIn">
+        <!-- new container -->
+        <div class="new container" id="new">
+            <div class="card-group my-4">
+                <div class="card">
+                    <img src="img/new1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/new2.jpg" class="card-img-top" alt="..." height="247px" style="object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                            content.
+                        </p>
+                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/new3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This card has even longer content than the first to show that equal
+                            height
+                            action.</p>
+                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- regular container -->
+        <div class="regular container disable" id="regular">
+            <div class="card-group my-4">
+                <div class="card">
+                    <img src="img/recent1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/recent2.jpg" class="card-img-top" alt="..." height="247px" style="object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                            content.
+                        </p>
+                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/recent3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This card has even longer content than the first to show that equal
+                            height
+                            action.</p>
+                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- trending container -->
+        <div class="trending container disable" id="trending">
+            <div class="card-group my-4">
+                <div class="card">
+                    <img src="img/trending/t1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/trending/t2.jpg" class="card-img-top" alt="..." height="247px"
+                        style="object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                            content.
+                        </p>
+                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/trending/t3.jpg" class="card-img-top" alt="..." height="247px"
+                        style="object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                            content.
+                        </p>
+                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Top Stories -->
+        <div class="container top-stories wow animate__animated animate__slideInUp">
+            <h4 class="fst-italic">TOP STORIES</h4>
+            <div class="top-container">
+                <ul class="list-unstyled">
+                    <li>
+                        <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                            href="">
+                            <img src="https://images.unsplash.com/photo-1508780709619-79562169bc64?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=96&ixid=MnwxfDB8MXxyYW5kb218MHx8YmxvZ3x8fHx8fDE2OTMxMzk3MjM&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300"
+                                alt="">
+                            <div class="col-lg-8">
+                                <h6 class="mb-0">Example blog post title</h6>
+                                <small class="text-body-secondary">January 15, 2023</small>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                            href="">
+                            <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=96&ixid=MnwxfDB8MXxyYW5kb218MHx8YmxvZ3x8fHx8fDE2OTMxMzk3NTI&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300"
+                                alt="">
+                            <div class="col-lg-8">
+                                <h6 class="mb-0">Example blog post title</h6>
+                                <small class="text-body-secondary">January 15, 2023</small>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                            href="">
+                            <img src="https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=96&ixid=MnwxfDB8MXxyYW5kb218MHx8YmxvZ3x8fHx8fDE2OTMxMzk3NzU&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300"
+                                alt="">
+                            <div class="col-lg-8">
+                                <h6 class="mb-0">Example blog post title</h6>
+                                <small class="text-body-secondary">January 15, 2023</small>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-unstyled">
+                    <li>
+                        <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                            href="">
+                            <img src="https://images.unsplash.com/photo-1605379399843-5870eea9b74e?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=96&ixid=MnwxfDB8MXxyYW5kb218MHx8cHJvZ3JhbW1pbmd8fHx8fHwxNjkzMTM5OTYz&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300"
+                                alt="">
+                            <div class="col-lg-8">
+                                <h6 class="mb-0">Example blog post title</h6>
+                                <small class="text-body-secondary">January 15, 2023</small>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                            href="">
+                            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=96&ixid=MnwxfDB8MXxyYW5kb218MHx8cHJvZ3JhbW1pbmd8fHx8fHwxNjkzMTM5ODI4&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300"
+                                alt="">
+                            <div class="col-lg-8">
+                                <h6 class="mb-0">Example blog post title</h6>
+                                <small class="text-body-secondary">January 15, 2023</small>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                            href="">
+                            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=96&ixid=MnwxfDB8MXxyYW5kb218MHx8cHJvZ3JhbW1pbmd8fHx8fHwxNjkzMTM5ODYz&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300"
+                                alt="">
+                            <div class="col-lg-8">
+                                <h6 class="mb-0">Example blog post title</h6>
+                                <small class="text-body-secondary">January 15, 2023</small>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- engage -->
+    <div class="container-fluid engage wow animate__animated animate__fadeIn">
+        <h2 class="engage-heading">Engage With Us</h2>
+        <div class="container-fluid engage-container">
+            <div class="e-part-1">
+                <img src="img/e1.jpg" alt="">
+            </div>
+            <div class="e-part-2">
+                <h2>Jonathan</h2>
+                <p class="fst-italic">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo neque possimus
+                    fugit
+                    necessitatibus unde placeat, tempore eius asperiores suscipit quibusdam repellat beatae, hic ratione
+                    ut
+                    iure autem? Dolorem saepe soluta impedit ea."</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- explore -->
+    <div class="container-fluid explore my-4 wow animate__animated animate__slideInUp">
+        <h2>Explore Courses!</h2>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3 my-2">
+            <div class="col">
+                <div class="card shadow-sm wow animate__animated animate__slideInLeft cardFirst">
+                    <img src="img/c.png" class="card-img-top" alt="..." style="padding: 10px;">
+                    <div class="card-body">
+                        <h5>C & C++</h5>
+                        <p class="card-text">Explore our new C and C++ course</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm wow animate__animated animate__slideInLeft">
+                    <img src="img/java.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5>Java</h5>
+                        <p class="card-text">Explore our new Java course with backend</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm wow animate__animated animate__slideInRight">
+                    <img src="img/py.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5>Python</h5>
+                        <p class="card-text">Explore our new Python course</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm wow animate__animated animate__slideInRight cardLast">
+                    <img src="img/html.jfif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5>HTML, CSS, JS</h5>
+                        <p class="card-text">Explore our new Web Development course</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn btn-secondary viewbtn">View More</button>
+    </div>
+
+
+    <!-- Grow -->
+    <div class="container-fluid grow wow animate__animated animate__slideInUp">
+        <div class="container my-3">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="img/g1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h4>Tailored to you</h4>
+                            <p class="card-text">No matter your experience level, you'll be writing <strong>real,
+                                    functional code within minutes</strong> of starting your first course.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="img/g2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h4>Grow Gradually</h4>
+                            <p class="card-text">Go step-by-step through our unique courses. Assess what you've learned
+                                with in-lesson quizzes, and <strong>gradually advance your skills with
+                                    practice.</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="img/g3.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h4>Get Certified</h4>
+                            <p class="card-text"><strong>Earn a certificate</strong> to validate your newly acquired
+                                skills. Post it on social for others to see.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- learn & share -->
+    <div class="container-fluid learn wow animate__animated animate__slideInUp">
+        <h2><strong>Learn & Share</strong></h2>
+        <h3>Perfect Platform to boost your skills and compete with others</h3>
+        <div class="learn-container">
+            <div class="student wow animate__animated animate__zoomIn">
+                <img src="img/l1.jpg" alt="">
+                <div class="learn-text">
+                    <h4>Students</h4>
+                    <p>Students can prepare here for upcoming big tests or yheir first interview. Use our's real-world
+                        practice to reinforce what you've learned and get you ready for that big moment.</p>
+                </div>
+            </div>
+            <div class="professional wow animate__animated animate__zoomIn">
+                <img src="img/l2.jpg" alt="">
+                <div class="learn-text">
+                    <h4>Professionals</h4>
+                    <p>You can learn something totally new to advance your career. Get access to all variety of courses,
+                        from machine learning to web development. Sharing your certificates here can also help you to
+                        get hired.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- premium -->
+    <div class="container-fluid premium wow animate__animated animate__fadeIn">
+        <h3>Become more Creative!</h3>
+        <h2>Buy Premium Membership</h2>
+        <p>$10/month for unlimited access to all 120+ online classes</p>
+        <button type="button" class="btn btn-info">Subscribe</button>
+        <div class="premium-image">
+            <img id="pi-1" class="wow animate__animated animate__slideInUp" src="img/c.png" alt="">
+            <img id="pi-2" class="wow animate__animated animate__slideInUp" src="img/java.jpg" alt="">
+            <img id="pi-3" class="wow animate__animated animate__slideInUp" src="img/py.png" alt="">
+            <!-- <img id="pi-4" src="img/c.png" alt=""> -->
+        </div>
+    </div>
+
+    <!-- Supportive Community -->
+    <div class="container-fluid suppot wow animate__animated animate__slideInUp">
+        <h2>Supportive Community</h2>
+        <div class="number wow animate__animated animate__fadeIn animate__delay-1s">44,530,504</div>
+        <div class="support-info">Share your code or questions and get instant feedback or become a creator and spread
+            your knowledge and experience with our global community of learners.</div>
+        <img class="wow animate__animated animate__fadeIn animate__delay-1s" src="img/s1.png" alt="">
+        <div class="sp">
+            <div class="circle1 wow animate__animated animate__fadeIn"></div>
+            <div class="circle2 wow animate__animated animate__fadeIn"></div>
+            <div class="circle3 wow animate__animated animate__fadeIn"></div>
+            <img id="sp1" class="wow animate__animated animate__slideInRight" src="img/sp/sp1.jpg" alt="">
+            <img id="sp2" class="wow animate__animated animate__slideInLeft" src="img/sp/sp2.jpg" alt="">
+            <img id="sp3" class="wow animate__animated animate__slideInRight" src="img/sp/sp3.jpg" alt="">
+            <img id="sp4" class="wow animate__animated animate__slideInLeft" src="img/sp/sp4.jpg" alt="">
+            <img id="sp5" class="wow animate__animated animate__slideInLeft" src="img/sp/sp5.jpg" alt="">
+        </div>
+    </div>
+
+    <!-- join-us -->
+    <div class="container join-us wow animate__animated animate__zoomIn">
+        <h4>JOIN NOW</h4>
+        <div class="join1">&</div>
+        <div class="join2">Start Coding From Today</div>
+        <div class="premium-image">
+            <img id="pi-1" src="img/c.png" alt="">
+            <img id="pi-2" src="img/java.jpg" alt="">
+            <img id="pi-3" src="img/py.png" alt="">
+            <!-- <img id="pi-4" src="img/c.png" alt=""> -->
+        </div>
+        <button class="btn btn-style" data-bs-toggle="modal" data-bs-target="#signupModal">Sign up</button>
+    </div>
+
+    <!-- footer -->
+    <footer class="bd-footer wow animate__animated animate__slideInUp"> <!-- other used classes py-4 py-md-5 mt-5 -->
+        <div class="container py-4"> <!-- other used classes py-4 py-md-5 px-4 px-md-3 text-body-secondary -->
+            <div class="row">
+                <div class="col-6 col-lg-2 offset-lg-1 mb-3 section">
+                    <h5>Navigation</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="/">Home</a></li>
+                        <li class="mb-2"><a href="">Docs</a></li>
+                        <li class="mb-2"><a href="">Examples</a></li>
+                        <li class="mb-2"><a href="">Icons</a></li>
+                        <li class="mb-2"><a href="">Themes</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 offset-lg-1 mb-3 section">
+                    <h5>Languages</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="">C</a></li>
+                        <li class="mb-2"><a href="">C++</a></li>
+                        <li class="mb-2"><a href="">C#</a></li>
+                        <li class="mb-2"><a href="">Java</a></li>
+                        <li class="mb-2"><a href="">Python</a></li>
+                        <li class="mb-2"><a href="">HTML</a></li>
+                        <li class="mb-2"><a href="">CSS</a></li>
+                        <li class="mb-2"><a href="">JavaScript</a></li>
+                        <li class="mb-2"><a href="">React JS</a></li>
+                        <li class="mb-2"><a href="">SQL</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 offset-lg-1 mb-3 section">
+                    <h5>Community</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="">Discuss</a></li>
+                        <li class="mb-2"><a href="">Code Bytes</a></li>
+                        <li class="mb-2"><a href="">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 offset-lg-1 mb-3 section">
+                    <h5>Contact With Us</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href=""><i class="fab fa-linkedin"></i> Linked in</a></li>
+                        <li class="mb-2"><a href=""><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li class="mb-2"><a href=""><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li class="mb-2"><a href=""><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li class="mb-2"><a href=""><i class="fab fa-youtube"></i> Youtube</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
