@@ -1,154 +1,44 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
-    <!-- <div class="img">
-        <img src="img1.jpg" alt="" width="100%">
-    </div> -->
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Weather</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input id="city" class="form-control me-2" type="search" placeholder="Enter" aria-label="Search">
-                    <button class="btn btn-outline-light" type="submit" id="submit">Search</button>
-                </form>
-            </div>
+    <div class="card">
+        <div class="search">
+            <input type="text" placeholder="Enter City Name" spellcheck="false">
+            <button><img src="images/search.png" alt="photo"></button>
         </div>
-    </nav>
-    <div class="container my-4 weather">
-        <h1 class="my-4 text-center" style="color: white;">Weather of <span id="cityname"></span></h1>
-        <main class="main">
-            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        <div class="weather">
+            <img src="images/sun.png" alt="" class="weather-icon animate__animated animate__fadeInDown animate__duration-1.5s">
+            <h1 class="temp">--</h1>
+            <h2 class="city">City</h2>
+            <p class="text">Condition</p>
+            <div class="details">
                 <div class="col">
-                    <div class="card mb-4 rounded-3 shadow-sm border-black">
-                        <div class="card-header py-3 text-bg-primary border-black">
-                            <h4 class="my-0 fw-normal">Temperature</h4>
-                        </div>
-                        <div class="card-body">
-                            <h1 class="card-title pricing-card-title"><span id="temp"></span><small
-                                    class="text-body-secondary fw-light"><span>&#8451;</span></small></h1>
-                            <ul class="list-unstyled mt-3 mb-4">
-                                <li>Temparature is <span id="temp2"></span></li>
-                                <li>Min Temparature is <span id="min_temp"></span></li>
-                                <li>Max Temparature is <span id="max_temp"></span></li>
-                            </ul>
-                            <button type="button" class="w-100 btn btn-lg btn-border">See More</button>
-                        </div>
+                    <img src="images/humidity.png" alt="">
+                    <div>
+                        <p class="humidity">--</p>
+                        <p>Humidity</p>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card mb-4 rounded-3 shadow-sm border-black">
-                        <div class="card-header py-3 text-bg-primary border-black">
-                            <h4 class="my-0 fw-normal">Humidity</h4>
-                        </div>
-                        <div class="card-body">
-                            <h1 class="card-title pricing-card-title"><span id="humidity"></span><small
-                                    class="text-body-secondary fw-light">%</small></h1>
-                            <ul class="list-unstyled mt-3 mb-4">
-                                <li>Humidity is <span id="humidity2"></span></li>
-                                <li>Cloud PCT is <span id="cloud_pct"></span></li>
-                                <li>Feels Like <span id="feels_like"></span></li>
-                            </ul>
-                            <button type="button" class="w-100 btn btn-lg btn-border">See More</button>
-                        </div>
+                    <img src="images/wind.png" alt="">
+                    <div>
+                        <p class="wind">--</p>
+                        <p>Wind Speed</p>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="card mb-4 rounded-3 shadow-sm border-black">
-                        <div class="card-header py-3 text-bg-primary border-black">
-                            <h4 class="my-0 fw-normal">Wind</h4>
-                        </div>
-                        <div class="card-body">
-                            <h1 class="card-title pricing-card-title"><span id="wind_speed"></span></span><small
-                                    class="text-body-secondary fw-light">km/h</small></h1>
-                            <ul class="list-unstyled mt-3 mb-4">
-                                <li>Wind Speed is <span id="wind_speed2"></span></li>
-                                <li>Sunrise <span id="sunrise"></span></li>
-                                <li>Sunset <span id="sunset"></span></li>
-                            </ul>
-                            <button type="button" class="w-100 btn btn-lg btn-border">See More</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-    </div>
-    
-    <!-- <footer class="bd-footer"> 
-        <div class="container py-4">
-            <div class="row">
-                <div class="col-6 col-lg-2 offset-lg-1 mb-3 section">
-                    <h5>Links</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="/">Home</a></li>
-                        <li class="mb-2"><a href="">Docs</a></li>
-                        <li class="mb-2"><a href="">Examples</a></li>
-                        <li class="mb-2"><a href="">Icons</a></li>
-                        <li class="mb-2"><a href="">Themes</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-lg-2 offset-lg-1 mb-3 section">
-                    <h5>Links</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="/">Home</a></li>
-                        <li class="mb-2"><a href="">Docs</a></li>
-                        <li class="mb-2"><a href="">Examples</a></li>
-                        <li class="mb-2"><a href="">Icons</a></li>
-                        <li class="mb-2"><a href="">Themes</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-lg-2 offset-lg-1 mb-3 section">
-                    <h5>Links</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="/">Home</a></li>
-                        <li class="mb-2"><a href="">Docs</a></li>
-                        <li class="mb-2"><a href="">Examples</a></li>
-                        <li class="mb-2"><a href="">Icons</a></li>
-                        <li class="mb-2"><a href="">Themes</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-lg-2 offset-lg-1 mb-3 section">
-                    <h5>Links</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="/">Home</a></li>
-                        <li class="mb-2"><a href="">Docs</a></li>
-                        <li class="mb-2"><a href="">Examples</a></li>
-                        <li class="mb-2"><a href="">Icons</a></li>
-                        <li class="mb-2"><a href="">Themes</a></li>
-                    </ul>
                 </div>
             </div>
         </div>
-    </footer> -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-        crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+        <div class="error animate__animated animate__headShake animate__delay-0.5s">Enter a Valid City Name!!</div>
+        <script src="app.js"></script>
 </body>
 
 </html>
