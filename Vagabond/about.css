@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
-nav div .title{
+nav div .title {
     font-family: 'Dancing Script', cursive;
     font-size: 1.5rem;
 }
+
 
 /* .row{
     flex-wrap: nowrap;
@@ -13,4 +14,39 @@ nav div .title{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.feature {
+    background-color: #51688a;
+    margin: 0 18px;
+    color: white;
+    text-align: center;
+}
+
+.feature p {
+    margin-top: 15px;
+}
+
+@media (min-width: 992px) {
+    .row-cols-lg-3>* {
+        flex: 0 0 auto;
+        width: 30%;
+        border-radius: 10px;
+    }
+}
+
+.text-body-emphasis {
+    --bs-text-opacity: 1;
+    color: white !important;
+}
+
+@media screen and (max-width:991px) {
+    .feature {
+        margin: 10px auto;
+        border-radius: 10px;
+    }
+}
+
+footer {
+    margin-top: 0px;
 }
