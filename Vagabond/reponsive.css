@@ -123,7 +123,7 @@
 
 @media screen and (max-width:550px) {
     .client-head {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
 
     .client-thoughts h3 {
@@ -159,26 +159,43 @@
     .places img {
         height: 200px;
     }
+
+    .places .card {
+        height: 538px;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
     .places img {
         height: 230px;
     }
+
+    .places .card {
+        height: 520px;
+    }
 }
 
-@media (min-width: 375px) and (max-width: 575px) {
+@media (max-width: 575px) {
     .places {
         font-size: 14px;
     }
 
+    .places .card {
+        justify-content: center;
+        align-items: center;
+        height: auto !important;
+    }
+
     .places .row-cols-sm-2>* {
         flex: 0 0 auto;
-        width: 50%;
+        width: 100%;
     }
 
     .places img {
-        height: 170px;
+        height: auto;
+        width: 315px;
+        border-radius: 10px;
+        margin-top: 14px;
     }
 }
 
@@ -186,9 +203,13 @@
     .places .col-3 {
         width: 60%;
     }
+
+    .places .card:hover img {
+        transform: none;
+    }
 }
 
-/* Places */
+/* Sponsors */
 @media screen and (max-width:1200px) {
     .sponsor img {
         height: 100px;
@@ -213,6 +234,20 @@
     }
 }
 
+/* Hot tour */
+
+@media screen and (max-width:1200px) {
+    .hot-tour .row {
+        height: auto;
+    }
+}
+
+@media screen and (max-width:510px) {
+    .hot-tour img {
+        height: auto;
+    }
+}
+
 
 /* Freq asked questions */
 @media screen and (max-width:550px) {
@@ -234,13 +269,13 @@
 
 @media screen and (max-width:991px) {
     footer .section {
-       text-align: center;
+        text-align: center;
     }
-} 
+}
 
 @media screen and (max-width:400px) {
     footer {
-        display: flex  !important;
+        display: flex !important;
         flex-wrap: wrap !important;
         justify-content: space-between !important;
         font-size: 14px;
@@ -249,7 +284,7 @@
     footer .section {
         width: 49% !important;
     }
-} 
+}
 
 /* About font img */
 

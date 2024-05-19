@@ -1,0 +1,33 @@
+.places {
+    margin-top: 20px;
+}
+
+.card {
+    height: 494px !important;
+}
+
+@media screen and (max-width:991px) {
+    .places .card:hover img {
+        transform: none !important;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 575px) {
+    .places .card {
+        justify-content: center;
+        align-items: center;
+        height: auto !important;
+    }
+
+    .places .row-cols-sm-2>* {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .places img {
+        height: auto;
+        width: 315px;
+        border-radius: 10px;
+        margin-top: 14px;
+      }
+}

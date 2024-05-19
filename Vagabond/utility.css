@@ -8,7 +8,7 @@
     --bs-btn-hover-color: #fff;
     --bs-btn-hover-bg: rgb(0, 195, 255);
     --bs-btn-hover-border-color: rgb(0, 195, 255);
-    --bs-btn-focus-shadow-rgb: 25,135,84;
+    --bs-btn-focus-shadow-rgb: 25, 135, 84;
     --bs-btn-active-color: #fff;
     --bs-btn-active-bg: rgb(0, 195, 255);
     --bs-btn-active-border-color: rgb(0, 195, 255);
@@ -19,13 +19,13 @@
     --bs-gradient: none;
 }
 
-.btn-style{
+.btn-style {
     --bs-btn-color: rgb(255, 65, 65);
     --bs-btn-border-color: rgb(255, 65, 65);
     --bs-btn-hover-color: #fff;
     --bs-btn-hover-bg: rgb(255, 65, 65);
     --bs-btn-hover-border-color: rgb(255, 65, 65);
-    --bs-btn-focus-shadow-rgb: 25,135,84;
+    --bs-btn-focus-shadow-rgb: 25, 135, 84;
     --bs-btn-active-color: #fff;
     --bs-btn-active-bg: rgb(255, 65, 65);
     --bs-btn-active-border-color: rgb(255, 65, 65);
@@ -34,4 +34,11 @@
     --bs-btn-disabled-bg: transparent;
     --bs-btn-disabled-border-color: rgb(255, 65, 65);
     --bs-gradient: none;
+}
+
+@media screen and (max-width:991px) {
+    .py-5 {
+        padding-top: 2rem !important;
+        padding-bottom: 0rem !important;
+    }
 }

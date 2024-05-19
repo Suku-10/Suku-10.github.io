@@ -63,15 +63,14 @@ nav div .title {
 
 /* Client thoughts */
 .client-thoughts {
-    /* background-color: blue; */
     border-radius: 10px;
 }
 
 .client-head {
-    /* font-family: 'Mulish', sans-serif; */
-    font-size: 1.8rem;
-    /* font-weight: bold; */
+    font-family: var(--bs-body-font-family) !important;
+    font-size: 2.2rem;
     margin-bottom: 10px;
+    font-weight: 500;
 }
 
 .client {
@@ -126,10 +125,71 @@ nav div .title {
     font-family: 'Mulish', sans-serif;
 }
 
+.places .client-head {
+    font-family: var(--bs-body-font-family) !important;
+}
+
 .places .btn:hover {
     color: var(--bs-btn-hover-color);
     background-color: #2699ff;
     border-color: #0087ff;
+}
+
+.places .card {
+    overflow: hidden;
+}
+
+.places img {
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+.places .card:hover img {
+    transform: scale(1.03);
+}
+
+/* services */
+.services .col {
+    padding-top: 15px;
+}
+
+.services i {
+    font-size: 20px;
+    margin: 10px 0 0 10px;
+}
+
+.services .col:hover {
+    transition: all 0.5s ease;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    cursor: pointer;
+}
+
+/* Hot Tour */
+.hot-tour .row{
+    height: 300px;
+}
+
+.hot-tour .btn-outline {
+    margin: 10px 0 0 0;
+    background-color: rgb(0, 195, 255);
+    color: white;
+}
+
+.hot-tour .btn-outline:hover {
+    background-color: white;
+    outline: rgb(0, 195, 255);
+    color: rgb(0, 195, 255);
+}
+
+.hot-tour i{
+    font-size: 12px;
+}
+
+.hot-tour img {
+    width: 275px;
+    height: 279px;
+    object-fit: cover;
 }
 
 /* Sponsors */
@@ -155,22 +215,22 @@ nav div .title {
 /* Footer */
 
 footer {
-	margin-top: 17vh;
-	color: white;
-	position: relative;
-	display: flex;
-	justify-content: flex-start;
+    margin-top: 17vh;
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
     flex-direction: column;
 }
 
-.footer2{
+.footer2 {
     display: flex;
     justify-content: space-between;
     /* margin: 27px auto; */
 }
 
-footer h5{
-	color: white;
+footer h5 {
+    color: white;
     text-decoration: underline;
 }
 
@@ -184,6 +244,7 @@ footer h5{
     text-decoration: none;
 }
 
-.bd-footer a:hover, .bd-footer a:focus {
+.bd-footer a:hover,
+.bd-footer a:focus {
     text-decoration: underline;
 }
