@@ -7,13 +7,16 @@
     <title>Vagabond - Travel wherever you want</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/utility.css">
     <link rel="stylesheet" href="css/reponsive.css">
 </head>
 
 <body>
+    <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar bg-dark border-bottom border-bottom-dark bg-body-tertiary"
         data-bs-theme="dark">
         <div class="container-fluid">
@@ -32,21 +35,22 @@
                         <a class="nav-link" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="contact.html">Contact Us</a>
+                        <a class="nav-link" href="contact.html">Contact Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="gallery.html">Gallery</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="reservation.html">Reservation</a>
+                        <a class="nav-link active" href="reservation.html">Reservation</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <!-- Contact -->
+
+    <!-- reservation form -->
     <div class="container mt-5">
-        <div class="client-head border-bottom pb-2">Contact Us</div>
+        <div class="client-head border-bottom pb-2">Reservation</div>
         <form>
             <div class="row mb-3">
                 <div class="col-md-6">
@@ -70,54 +74,63 @@
             </div>
 
             <div class="mb-3">
-                <label for="subject" class="form-label">Subject</label>
-                <input type="text" class="form-control" id="subject" placeholder="Enter the subject" required>
+                <label for="bookingType" class="form-label">Select Hotel</label>
+                <select class="form-select" id="bookingType" required>
+                    <option value="" selected disabled>Select booking type</option>
+                    <option value="hotel">Hotel A</option>
+                    <option value="hotel">Hotel B</option>
+                    <option value="hotel">Hotel C</option>
+                    <option value="hotel">Hotel D</option>
+                </select>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="checkIn" class="form-label">Check-In Date</label>
+                    <input type="date" class="form-control" id="checkIn" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="checkOut" class="form-label">Check-Out Date</label>
+                    <input type="date" class="form-control" id="checkOut" required>
+                </div>
             </div>
 
             <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"
-                    required></textarea>
+                <label for="guests" class="form-label">Number of Guests</label>
+                <input type="number" class="form-control" id="guests" placeholder="Enter number of guests" required>
             </div>
 
-            <button type="submit" class="btn btn-primary">Send Message</button>
+            <div class="mb-3">
+                <label for="specialRequests" class="form-label">Special Requests</label>
+                <textarea class="form-control" id="specialRequests" rows="3"
+                    placeholder="Any special requests?"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit Reservation</button>
         </form>
     </div>
 
-
+    <!-- footer -->
     <footer class="bd-footer bg-dark border-bottom border-bottom-dark bg-body-tertiary" data-bs-theme="dark">
         <!-- other used classes py-4 py-md-5 mt-5 -->
         <div class="container py-4">
             <!-- other used classes py-4 py-md-5 px-4 px-md-3 text-body-secondary -->
             <div class="row">
                 <div class="col-6 col-lg-2 offset-lg-1 mb-3 section">
-                    <h5>Links</h5>
+                    <h5>Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="/">Home</a></li>
-                        <li class="mb-2"><a href="">Docs</a></li>
-                        <li class="mb-2"><a href="">Examples</a></li>
-                        <li class="mb-2"><a href="">Icons</a></li>
-                        <li class="mb-2"><a href="">Themes</a></li>
+                        <li class="mb-2"><a href="index.html">Home</a></li>
+                        <li class="mb-2"><a href="about.html">About</a></li>
+                        <li class="mb-2"><a href="contact.html">Contact Us</a></li>
+                        <li class="mb-2"><a href="gallery.html">Gallery</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-lg-2 offset-lg-1 mb-3 section">
-                    <h5>Links</h5>
+                    <h5>Contact</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="/">Home</a></li>
-                        <li class="mb-2"><a href="">Docs</a></li>
-                        <li class="mb-2"><a href="">Examples</a></li>
-                        <li class="mb-2"><a href="">Icons</a></li>
-                        <li class="mb-2"><a href="">Themes</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-lg-2 offset-lg-1 mb-3 section">
-                    <h5>Links</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="/">Home</a></li>
-                        <li class="mb-2"><a href="">Docs</a></li>
-                        <li class="mb-2"><a href="">Examples</a></li>
-                        <li class="mb-2"><a href="">Icons</a></li>
-                        <li class="mb-2"><a href="">Themes</a></li>
+                        <li class="mb-2">+1 323-913-4688</li>
+                        <li class="mb-2">info@vegabond.org</li>
+                        <li class="mb-2">4730 Crystal Springs Dr, Los Angeles, CA 90027</li>
                     </ul>
                 </div>
                 <div class="col-6 col-lg-2 offset-lg-1 mb-3 section">
